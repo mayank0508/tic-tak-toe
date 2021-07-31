@@ -47,13 +47,13 @@ const Game = () => {
 
   const renderMove = () =>
     history.map((_step, move) => {
-      const destination = move ? `Go to move#${move}` : `Reset the Game 🚀`;
+      const destination = move ? `Go to move # ${move}` : `Reset the Game 🚀`;
       return (
-        <li key={move}>
+        <ul key={move}>
           <ButtonStyle onClick={() => jumpTo(move)}>{destination}</ButtonStyle>
           {/* <ButtonStyle onClick={() => setBoard(Array(9).fill(null))}> */}{' '}
           {/* here what we are doing is to setBoard to and array of 9 which is unfilled*/}
-        </li>
+        </ul>
       );
     });
 
