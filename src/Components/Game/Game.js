@@ -47,7 +47,7 @@ const Game = () => {
 
   const renderMove = () =>
     history.map((_step, move) => {
-      const destination = move ? `Go to move#${move}` : `Go to start`;
+      const destination = move ? `Go to move#${move}` : `Reset the Game 🚀`;
       return (
         <li key={move}>
           <ButtonStyle onClick={() => jumpTo(move)}>{destination}</ButtonStyle>
