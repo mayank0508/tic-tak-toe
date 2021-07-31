@@ -6,8 +6,12 @@ import { ButtonStyle } from './Button.style';
 
 //Hooks
 const Game = () => {
-  const [board, setBoard] = useState(Array(9).fill(null)); // this means that there is a state which is a array but it is currently empty
+  // const [board, setBoard] = useState(Array(9).fill(null)); // this means that there is a state which is a array but it is currently empty
   // the way we destructure the arrays are using the ES6 format.
+
+  const [history, sethistory] = useState([Array(9).fill(null)]); // here we are chaneing the board to history cause now we will
+  //add the time jump function init, and then put the useState in [Array(9).fill(null)], because there will be more than one array init
+
   const [xIsNext, setxIsNext] = useState(true);
   const winner = calculateWinner(board); // thsi const tells us that this particular move is a winning move not
 
